@@ -1,0 +1,30 @@
+<html lang="en" ng-app="APP">
+	<head>
+		<meta charset="UTF-8">
+		<title>Movie Web Search</title>
+		<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0-rc2/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="app/styles/movie-info-box.css" />
+	</head>
+	<body>
+		<header-app></header-app>
+			
+		<div class="container">
+			<div class="main">
+				<div ng-controller="searchMovieController">
+					<div ng-view></div>
+				</div> 		
+			</div>
+		</div>
+		
+		<footer-app></footer-app>
+		
+		<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.5/angular.min.js"></script>
+		<script src="app/app.js"></script>
+		<script src="app/scripts/controller/movie-search.js"></script>				
+		<script src="app/scripts/controller/actor-search.js"></script>				
+		<script src="app/scripts/controller/actor-view-detail.js"></script>				
+		<script src="app/scripts/controller/movie-view-detail.js"></script>				
+		<script src="app/scripts/directive/header-app.js"></script>
+		<script src="app/scripts/directive/footer-app.js"></script>
+	</body>
+</html>

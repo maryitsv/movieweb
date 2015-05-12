@@ -1,0 +1,9 @@
+.topic {
+	height:300px;
+}
+
+.center-topic{
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+}

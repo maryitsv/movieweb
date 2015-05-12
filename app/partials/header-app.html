@@ -1,0 +1,25 @@
+<div class="page-header">
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<a class="navbar-brand text-primary text-md" href="#/"><p>  Movie Web  </p></a>
+			
+			<form class="navbar-form navbar-right">
+				<div class="form-group">
+					<input type="text" class="form-control" ng-model="searchMovieName" placeholder="Search by Movie's Title">
+				</div>
+				<a href="#/searchMovie/{{searchMovieName}}" class="btn btn-primary">
+				Find by Title's Name
+				</a>
+			</form>	
+					
+			<form class="navbar-form navbar-right" >
+				<div class="form-group">
+					<input type="text" class="form-control"  ng-model="searchActorName" placeholder="Search by Actor's Name">
+				</div>
+				<a href="#/searchActor/{{searchActorName}}" class="btn btn-primary">
+				Find by Actor's Name
+				</a>
+			</form>
+		</div>
+	</nav>
+</div>

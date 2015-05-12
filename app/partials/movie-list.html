@@ -1,0 +1,18 @@
+<div>
+	<h5 ng-model="movieResult">{{movieResult}}</h5>
+	<hr/>
+<div>
+<div ng-repeat="movie in movieList" info="movie">			
+	<div class="col-md-3 topic">
+		<h5 class="text-muted text-center">{{movie.title}}</h5>
+		<h6 class="text-muted text-center">{{movie.release_date}}</h5>
+		
+		<a href="#/movieDetail/{{movie.id}}" class="center-block">
+			<img ng-hide="movie.poster_path == null" class="center-topic thumbnail" src="http://image.tmdb.org/t/p/w130{{movie.poster_path}}" />
+			<img ng-hide="movie.poster_path != null" class="center-topic thumbnail" src="app/images/default_img.png" />
+		</a>
+		
+	</div>
+</div>
+
+<button ng-click="getMoreMovies()" ng-hide="movieList.length == 0" class="btn btn-success">Find more results</button>

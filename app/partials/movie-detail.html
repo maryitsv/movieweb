@@ -1,0 +1,42 @@
+<div>
+	<div class="row">
+		<div  class="col-sm-3">
+			<h4  class="text-muted text-center">{{movie_detail.title}}</h4>
+			<img class="center-topic thumbnail" src="http://image.tmdb.org/t/p/w130/{{movie_detail.poster_path}}" ng-hide="movie_detail.poster_path == null"/>
+			<img class="center-topic thumbnail" src="app/images/default_img.png" ng-hide="movie_detail.poster_path != null"/>
+		</div>
+		<div class="col-sm-9">
+			<dl class="dl-horizontal">
+			<dt >Overview</dt>
+			<dd  class="text-muted text-justify"> {{movie_detail.overview}}</dd>
+			<dt>Genres</dt>
+			<dd ng-repeat="genres in movie_detail.genres">
+					 {{genres.name}},
+			</dd>
+			<dt>Homepage</dt>
+			<dd class="text-muted"> <a href="{{movie_detail.homepage}}" target="_blank">{{movie_detail.homepage}}</a></dd>
+			<dt>Release date</dt>
+			<dd class="text-muted"> {{movie_detail.release_date}}</dd>
+			<dt>Runtime</dt>
+			<dd class="text-muted"> {{movie_detail.runtime}}</dd>
+			<dt>Status</dt>
+			<dd class="text-muted"> {{movie_detail.status}}</dd>
+			<dt>Vote average</dt>
+			<dd class="text-muted"> {{movie_detail.vote_average}}</dd>
+			<dt>Vote count</dt>
+			<dd class="text-muted"> {{movie_detail.vote_count}}</dd>
+			</dl>
+		</div>
+	</div>
+</div>
+<h3 class="text-center">Credits</h3>
+<div ng-repeat="actor in actorList" info="actor">		
+	<div class="col-md-3 topic">
+		<h5 class="text-muted text-center">{{actor.name}}</h5>
+		<h6 class="text-muted text-center">{{actor.character}}</h6>
+		<a href="#/actorDetail/{{actor.id}}">
+		<img class="center-topic thumbnail" src="http://image.tmdb.org/t/p/w130/{{actor.profile_path}}" ng-hide="actor.profile_path == null"/>
+		<img class="center-topic thumbnail" src="app/images/default_img.png" ng-hide="actor.profile_path != null"/>
+		</a>
+	</div>
+</div>
