@@ -2,7 +2,7 @@
 	
 	MovieWebApp.config(function($routeProvider){
 		$routeProvider.
-		when('/',{templateUrl:'app/partials/movie-list.html'}).
+		when('/',{templateUrl:'app/partials/movie-list.html',controller:'searchMovieController'}).
 		when('/movieDetail/:id',{templateUrl:'app/partials/movie-detail.html',controller:'viewDetailMovieController'}).
 		when('/searchMovie/:searchMovieName',{templateUrl:'app/partials/movie-list.html',controller:'searchMovieController'}).
 		when('/searchActor/:searchActorName',{templateUrl:'app/partials/actor-list.html',controller:'searchActorController'}).
